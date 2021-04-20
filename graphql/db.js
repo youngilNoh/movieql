@@ -2,22 +2,22 @@ let movies = [
 	{
 		id: 0,
 		name: 'StarWars',
-		age: 1,
+		score: 1,
 	},
 	{
 		id: 1,
 		name: 'Avengers',
-		age: 15,
+		score: 15,
 	},
 	{
 		id: 2,
 		name: 'Godfather',
-		age: 99,
+		score: 99,
 	},
 	{
 		id: 3,
 		name: 'Logan',
-		age: 8,
+		score: 8,
 	},
 ];
 
@@ -36,4 +36,14 @@ export const deleteMovie = (id) => {
 	} else {
 		return false;
 	}
+};
+
+export const addMovie = (name, score) => {
+	const newMovie = {
+		id: movies.length,
+		name,
+		score,
+	};
+	movies.push(newMovie);
+	return newMovie;
 };
